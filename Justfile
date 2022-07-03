@@ -9,7 +9,7 @@ bootstrap:
     npm install
 
 build:
-    tsc
+    npm run publish
 
 # Increase version
 version level:
@@ -22,8 +22,14 @@ version level:
     git push
 
 publish:
-    npm publish
-    git clean -f
+    git diff-index --exit-code HEAD > /dev/null || ! echo $(dye -r ERROR) You have untracked changes. Commit your changes before bumping the version
+    git checkout next
+    git merge master
+    just build
+    git add .
+    git commit -m "Commit build"
+    git push
+    git checkout master
 
 patch:
     just version patch
