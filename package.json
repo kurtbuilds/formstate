@@ -23,15 +23,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kurtbuilds/bscore"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "url": "https://github.com/kurtbuilds/formstate"
   },
   "dependencies": {
-    "@kurtbuilds/lib": ">=1"
+    "@kurtbuilds/lib": "github:kurtbuilds/lib#next",
+    "react": "^17"
   },
-  "peerDependencies": {
-    "react": ">=16"
-  }
 }
