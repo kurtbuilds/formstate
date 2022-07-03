@@ -28,5 +28,5 @@
   "dependencies": {
     "@kurtbuilds/lib": "github:kurtbuilds/lib#next",
     "react": "^17"
-  },
+  }
 }
